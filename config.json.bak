@@ -1,0 +1,60 @@
+{
+    "language": "en",
+    "themePreference": "DARK",
+    "backgroundType": "NONE",
+    "enableParallax": false,
+    "customAccentColorArgb": null,
+    "lastCliVersion": null,
+    "lastPatchesVersion": null,
+    "lastPatchesVersionBySource": {},
+    "sourceVersionPrefs": {},
+    "sourceChannelFlagsSeeded": true,
+    "cardFills": {},
+    "globalCardFill": null,
+    "useSharpCorners": false,
+    "groupPatchesByCategory": true,
+    "homeAppSortMode": "RECOMMENDED",
+    "preferredPatchChannel": "STABLE",
+    "useSimplifiedMode": false,
+    "patchSource": [
+        {
+            "id": "morphe-default",
+            "name": "Morphe Patches",
+            "type": "DEFAULT",
+            "url": "https://github.com/MorpheApp/morphe-patches",
+            "filePath": null,
+            "deletable": false,
+            "enabled": true,
+            "usePreRelease": true,
+            "useExperimentalVersions": false
+        }
+    ],
+    "activePatchSourceId": "morphe-default",
+    "collapsibleSectionStates": {
+        "Signing": false,
+        "Strip libs": true,
+        "Runtime logs": true,
+        "GitHub PAT": false
+    },
+    "dismissedUpdateVersion": null,
+    "updateChannelPreference": "DEV",
+    "userDidChooseUpdateChannel": true,
+    "multiSourceHintDismissed": false,
+    "homeAppListFilter": "ALL",
+    "keystorePath": null,
+    "keystorePassword": null,
+    "keystoreAlias": "Morphe",
+    "keystoreEntryPassword": "Morphe",
+    "defaultOutputDirectory": null,
+    "keepArchitectures": [
+        "arm64-v8a"
+    ],
+    "gitHubPat": "",
+    "autoStartAdb": false,
+    "autoRouteLinksAfterInstall": false,
+    "disableStockLinksAfterInstall": false,
+    "autoCleanupTempFiles": true,
+    "developerOptions": true,
+    "excludedMppPatterns": [],
+    "lastLocalPatchDir": null
+}

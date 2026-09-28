@@ -1,0 +1,25 @@
+[
+  {
+    "name": "youtube",
+    "url": "https://www.apkmirror.com/uploads/?appcategory=youtube"
+  },
+  {
+    "name": "morphe-desktop",
+    "url": "https://github.com/MorpheApp/morphe-desktop/releases"
+  },
+  {
+    "name": "morphe-patches releases",
+    "url": "https://github.com/MorpheApp/morphe-patches/releases"
+  },
+  {
+    "name": "MicroG-RE",
+    "url": "https://github.com/MorpheApp/MicroG-RE/releases/tag/7.2.2-dev.3"
+  },
+  {
+    "name": "Temurin jdk-21.0.12.1+1",
+    "url": {
+      "windows": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1+1/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip",
+      "linux": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1+1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz"
+    }
+  }
+]

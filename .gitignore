@@ -1,0 +1,12 @@
+*.zip
+*.tar*
+
+jdk*/
+morphe-data/
+
+*.jar
+*.mpp
+*.apk
+
+!libs/
+!libs/*.jar
