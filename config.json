@@ -1,6 +1,7 @@
 {
     "language": "en",
     "themePreference": "DARK",
+    "themeStyle": "MORPHE",
     "backgroundType": "NONE",
     "enableParallax": false,
     "customAccentColorArgb": null,
@@ -11,11 +12,14 @@
     "sourceChannelFlagsSeeded": true,
     "cardFills": {},
     "globalCardFill": null,
-    "useSharpCorners": false,
+    "useSharpCorners": true,
+    "showAppIcons": false,
+    "showMoreAppsCard": false,
+    "communityNoticeAcknowledged": true,
     "groupPatchesByCategory": true,
     "homeAppSortMode": "RECOMMENDED",
     "preferredPatchChannel": "STABLE",
-    "useSimplifiedMode": false,
+    "useSimpleMode": false,
     "patchSource": [
         {
             "id": "morphe-default",
@@ -25,13 +29,12 @@
             "filePath": null,
             "deletable": false,
             "enabled": true,
-            "usePreRelease": true,
-            "useExperimentalVersions": false
+            "usePreRelease": true
         }
     ],
     "activePatchSourceId": "morphe-default",
     "collapsibleSectionStates": {
-        "Signing": false,
+        "Signing": true,
         "Strip libs": true,
         "Runtime logs": true,
         "GitHub PAT": false
@@ -41,6 +44,7 @@
     "userDidChooseUpdateChannel": true,
     "multiSourceHintDismissed": false,
     "homeAppListFilter": "ALL",
+    "preferredPatchSourceByPackage": {},
     "keystorePath": "morphe.keystore",
     "keystorePassword": "dashi2",
     "keystoreAlias": "morphe",
@@ -56,5 +60,9 @@
     "autoCleanupTempFiles": true,
     "developerOptions": true,
     "excludedMppPatterns": [],
-    "lastLocalPatchDir": null
+    "lastLocalPatchDir": null,
+    "bytecodeMode": "FULL",
+    "validateFingerprints": false,
+    "verifyWithSdk": false,
+    "customAndroidSdkPath": null
 }
