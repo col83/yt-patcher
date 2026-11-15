@@ -2,6 +2,7 @@
 *.tar*
 
 jdk*/
+*.log
 morphe-data/
 
 *.jar

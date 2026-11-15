@@ -3,7 +3,7 @@
 cd /d "%~dp0"
 cls
 
-set "PATCHER=morphe-desktop-2.2.0-dev.12-all.jar"
+set "PATCHER=morphe-desktop-2.2.0-dev.19-all.jar"
 if not exist "%PATCHER%" (
     echo.
     echo ERROR: Patcher %PATCHER% not exist.
@@ -12,7 +12,7 @@ if not exist "%PATCHER%" (
     exit /b 2
 )
 
-set "PATCHES_FILE=patches-2.2.0.mpp"
+set "PATCHES_FILE=patches-2.3.0-dev.5.mpp"
 if not exist "%PATCHES_FILE%" (
     echo.
     echo ERROR: Patches file %PATCHES_FILE% not exist.
@@ -31,7 +31,7 @@ if not exist "%JDK_PATH%" (
 )
 
 set "INPUT_FILE_NAME=youtube"
-set "INPUT_FILE_VER=21.30.216"
+set "INPUT_FILE_VER=20.26.46"
 set "INPUT_FILE=%INPUT_FILE_NAME%_%INPUT_FILE_VER%.apk"
 if not exist "%INPUT_FILE%" (
     echo.
@@ -95,7 +95,6 @@ echo.
 -d "Custom player overlay opacity" ^
 -d "DeArrow" ^
 -d "Downloads" ^
--d "Enable debugging" ^
 -d "Mute button" ^
 -d "Network proxy" ^
 -d "Niconico comments" ^
@@ -104,7 +103,6 @@ echo.
 -d "Playback speed" ^
 -d "PoToken provider" ^
 -d "Return YouTube Dislike" ^
--d "Spoof video streams" ^
 -d "Spoof signature" ^
 -d "Theme" ^
 -d "Voice over translation" ^
@@ -117,7 +115,7 @@ pause
 :: Testing
 
 :: set "JDK_PATH=jdk-21.0.12.1+1"
-:: set "PATCHER=morphe-desktop-2.2.0-dev.12-all.jar"
+:: set "PATCHER=morphe-desktop-2.2.0-dev.19-all.jar"
 
 :: rd /s /q "morphe-data"
 :: mkdir "morphe-data"
@@ -125,6 +123,6 @@ pause
 :: mkdir "morphe-data\libs\"
 :: copy "libs\" "morphe-data\libs\" >nul
 :: mkdir "morphe-data\patches\MorpheApp-morphe-patches\"
-:: copy "patches-2.2.0.mpp" "morphe-data\patches\MorpheApp-morphe-patches\" >nul
+:: copy "patches-2.3.0-dev.5.mpp" "morphe-data\patches\MorpheApp-morphe-patches\" >nul
 
-:: "%JDK_PATH%\bin\java.exe" -Xms1024M -Xmx1512M -XX:+UseZGC -Xss256k -XX:ReservedCodeCacheSize=512M -jar "%PATCHER%"
+:: "%JDK_PATH%\bin\java.exe" -Xmx2G -XX:+UseLargePagesIndividualAllocation -XX:ReservedCodeCacheSize=512M -jar "%PATCHER%"

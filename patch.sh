@@ -1,3 +1,4 @@
+
 #!/usr/bin/bash
 set -Eeu
 clear
@@ -11,7 +12,7 @@ fi
 UPDATE_CHANNEL="dev" # main, dev
 UPDATE_JSON="$(curl -fsSL https://raw.githubusercontent.com/MorpheApp/morphe-patches/${UPDATE_CHANNEL}/patches-bundle.json)"
 
-PATCHER="morphe-desktop-2.2.0-dev.12-all.jar"
+PATCHER="morphe-desktop-2.2.0-dev.19-all.jar"
 if [ ! -f "${PATCHER}" ]; then
     echo; echo "ERROR: Patcher '${PATCHER}' not exist."; echo
     exit 2
@@ -20,7 +21,7 @@ fi
 PATCHES_VER="$(jq -r '.version' <<< "$UPDATE_JSON")"
 
 # test redefine
-PATCHES_VER="2.2.0"
+PATCHES_VER="2.3.0-dev.5"
 
 PATCHES_FILE_URL="$(jq -r '.download_url' <<< "$UPDATE_JSON")"
 # PATCHES_FILE_URL="https://github.com/MorpheApp/morphe-patches/releases/download/v${PATCHES_VER}/patches-${PATCHES_VER}.mpp"
@@ -38,7 +39,7 @@ if [ ! -d "${JDK_PATH}" ]; then
 fi
 
 INPUT_FILE_NAME="youtube"
-INPUT_FILE_VER=21.30.216
+INPUT_FILE_VER=20.26.46
 INPUT_FILE="${INPUT_FILE_NAME}_${INPUT_FILE_VER}.apk"
 if [ ! -f "${INPUT_FILE}" ]; then
     echo; echo "ERROR: input file '${INPUT_FILE}' not exist."; echo
@@ -93,7 +94,6 @@ echo
   -d "Custom player overlay opacity" \
   -d "DeArrow" \
   -d "Downloads" \
-  -d "Enable debugging" \
   -d "Mute button" \
   -d "Network proxy" \
   -d "Niconico comments" \
@@ -102,7 +102,6 @@ echo
   -d "Playback speed" \
   -d "PoToken provider" \
   -d "Return YouTube Dislike" \
-  -d "Spoof video streams" \
   -d "Spoof signature" \
   -d "Theme" \
   -d "Voice over translation" \
@@ -114,13 +113,13 @@ echo
 # Testing
 
 # JDK_PATH="jdk-21.0.12.1+1"
-# PATCHER="morphe-desktop-2.2.0-dev.12-all.jar"
+# PATCHER="morphe-desktop-2.2.0-dev.19-all.jar"
 
 # rm -rf "morphe-data"
 # mkdir "morphe-data"
 # cp -R "libs/" "morphe-data/"
 # cp "config.json" "morphe-data/"
 # mkdir "morphe-data/patches/MorpheApp-morphe-patches/"
-# cp "patches-2.2.0.mpp" "morphe-data/patches/MorpheApp-morphe-patches/"
+# cp "patches-2.3.0-dev.5.mpp" "morphe-data/patches/MorpheApp-morphe-patches/"
 
-# "%JDK_PATH%\bin\java.exe" -Xms1024M -Xmx1512M -XX:+UseZGC -Xss256k -XX:ReservedCodeCacheSize=512M -jar "%PATCHER%"
+# "%JDK_PATH%\bin\java.exe" -Xmx2G -XX:+UseLargePagesIndividualAllocation -XX:ReservedCodeCacheSize=512M -jar "%PATCHER%"
