@@ -3,7 +3,7 @@
 cd /d "%~dp0"
 cls
 
-set "PATCHER=morphe-desktop-2.2.0-dev.19-all.jar"
+set "PATCHER=morphe-desktop-2.3.0-dev.3-all.jar"
 if not exist "%PATCHER%" (
     echo.
     echo ERROR: Patcher %PATCHER% not exist.
@@ -12,7 +12,7 @@ if not exist "%PATCHER%" (
     exit /b 2
 )
 
-set "PATCHES_FILE=patches-2.3.0-dev.5.mpp"
+set "PATCHES_FILE=patches-2.4.0-dev.6.mpp"
 if not exist "%PATCHES_FILE%" (
     echo.
     echo ERROR: Patches file %PATCHES_FILE% not exist.
@@ -77,36 +77,57 @@ echo.
 
 %JDK_PATH%\bin\java.exe -Xms1024M -Xmx1512M -Xss256k -XX:ReservedCodeCacheSize=512M ^
 -jar "%PATCHER%" patch --patches "%PATCHES_FILE%" ^
---keystore "morphe-data\morphe.keystore" ^
---keystore-password "dashi2" ^
---keystore-entry-alias "morphe" ^
---keystore-entry-password "dashi2" ^
+-e "Add to queue" ^
+-e "Bypass link redirects" ^
+-e "Change start page" ^
+-e "Copy text" ^
+-e "Copy video link" ^
+-e "Disable continue watching prompt" ^
+-e "Disable DRC audio" ^
+-e "Disable fullscreen gestures" ^
+-e "Disable haptic feedback" ^
+-e "Disable player popup panels" ^
+-e "Disable QUIC protocol" ^
+-e "Disable rolling number animations" ^
+-e "Disable Shorts resuming on startup" ^
+-e "Disable sign in to TV popup" ^
+-e "Disable video codecs" ^
+-e "Enable debugging" ^
+-e "Force animations" ^
+-e "Force original audio" ^
+-e "Fullscreen video scale" ^
+-e "GmsCore support" ^
+-e "Hide ads" ^
+-e "Hide autoplay preview" ^
+-e "Hide end screen cards" ^
+-e "Hide end screen suggested video" ^
+-e "Hide info cards" ^
+-e "Hide layout components" ^
+-e "Hide player flyout menu components" ^
+-e "Hide player overlay buttons" ^
+-e "Hide video action buttons" ^
+-e "Loop video" ^
+-e "Miniplayer" ^
+-e "Open channel of live avatar" ^
+-e "Open system share sheet" ^
+-e "Playback buffer" ^
+-e "Playlist button" ^
+-e "Playlist improvements" ^
+-e "Reload video" ^
+-e "Remove background playback restrictions" ^
+-e "Remove viewer discretion dialog" ^
+-e "Restore original titles" ^
+-e "Sanitize sharing links" ^
+-e "Save to Watch later" ^
+-e "Shorts autoplay" ^
+-e "Skip live Shorts" ^
+-e "SponsorBlock" ^
+-e "Spoof device dimensions" ^
+-e "Spoof video streams" ^
+--exclusive ^
+--keystore "morphe-data\morphe.keystore" --keystore-password "dashi2" --keystore-entry-alias "morphe" --keystore-entry-password "dashi2" ^
+--striplibs "arm64-v8a" ^
 -o "%INPUT_FILE%-patched.apk" --force ^
--d "Alternative thumbnails" ^
--d "Ambient mode" ^
--d "Captions" ^
--d "Change header" ^
--d "Change installer source" ^
--d "Change picture-in-picture actions" ^
--d "Channel whitelist" ^
--d "Clone app" ^
--d "Custom branding" ^
--d "Custom font" ^
--d "Custom player overlay opacity" ^
--d "DeArrow" ^
--d "Downloads" ^
--d "Mute button" ^
--d "Network proxy" ^
--d "Niconico comments" ^
--d "On-the-go player" ^
--d "Open Shorts in regular player" ^
--d "Playback speed" ^
--d "PoToken provider" ^
--d "Return YouTube Dislike" ^
--d "Spoof signature" ^
--d "Theme" ^
--d "Voice over translation" ^
--d "Wide search bar" ^
 "%INPUT_FILE%"
 
 echo.
@@ -115,14 +136,17 @@ pause
 :: Testing
 
 :: set "JDK_PATH=jdk-21.0.12.1+1"
-:: set "PATCHER=morphe-desktop-2.2.0-dev.19-all.jar"
+:: set "PATCHER=morphe-desktop-2.3.0-dev.3-all.jar"
 
 :: rd /s /q "morphe-data"
 :: mkdir "morphe-data"
+
 :: copy "config.json" "morphe-data\" >nul
+
 :: mkdir "morphe-data\libs\"
 :: copy "libs\" "morphe-data\libs\" >nul
+
 :: mkdir "morphe-data\patches\MorpheApp-morphe-patches\"
-:: copy "patches-2.3.0-dev.5.mpp" "morphe-data\patches\MorpheApp-morphe-patches\" >nul
+:: copy "patches-2.4.0-dev.6.mpp" "morphe-data\patches\MorpheApp-morphe-patches\" >nul
 
 :: "%JDK_PATH%\bin\java.exe" -Xmx2G -XX:+UseLargePagesIndividualAllocation -XX:ReservedCodeCacheSize=512M -jar "%PATCHER%"

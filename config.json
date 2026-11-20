@@ -1,18 +1,24 @@
 {
     "language": "en",
     "themePreference": "DARK",
-    "themeStyle": "MORPHE",
+    "themeStyle": "MONOCHROME",
     "backgroundType": "NONE",
     "enableParallax": false,
     "customAccentColorArgb": null,
     "lastCliVersion": null,
     "lastPatchesVersion": null,
     "lastPatchesVersionBySource": {},
-    "sourceVersionPrefs": {},
+    "sourceVersionPrefs": {
+        "morphe-default": {
+            "mode": "FOLLOW_DEV",
+            "pinnedTag": null
+        }
+    },
     "sourceChannelFlagsSeeded": true,
     "cardFills": {},
     "globalCardFill": null,
     "useSharpCorners": true,
+    "useOutlines": false,
     "showAppIcons": false,
     "showMoreAppsCard": false,
     "communityNoticeAcknowledged": true,

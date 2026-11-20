@@ -4,6 +4,7 @@
 jdk*/
 *.log
 morphe-data/
+*.keystore
 
 *.jar
 *.mpp
