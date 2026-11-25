@@ -34,7 +34,7 @@
             "url": "https://github.com/MorpheApp/morphe-patches",
             "filePath": null,
             "deletable": false,
-            "enabled": true,
+            "enabled": false,
             "usePreRelease": true
         }
     ],
@@ -67,7 +67,7 @@
     "developerOptions": true,
     "excludedMppPatterns": [],
     "lastLocalPatchDir": null,
-    "bytecodeMode": "FULL",
+    "bytecodeMode": "STRIP_SAFE",
     "validateFingerprints": false,
     "verifyWithSdk": false,
     "customAndroidSdkPath": null

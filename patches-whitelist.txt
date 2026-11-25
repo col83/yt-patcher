@@ -1,47 +1,61 @@
-"Add to queue"
-"Bypass link redirects"
-"Change start page"
-"Copy text"
-"Copy video link"
-"Disable continue watching prompt"
-"Disable DRC audio"
-"Disable fullscreen gestures"
-"Disable haptic feedback"
-"Disable player popup panels"
-"Disable QUIC protocol"
-"Disable rolling number animations"
-"Disable Shorts resuming on startup"
-"Disable sign in to TV popup"
-"Disable video codecs"
-"Enable debugging"
-"Force animations"
-"Force original audio"
-"Fullscreen video scale"
-"GmsCore support"
-"Hide ads"
-"Hide autoplay preview"
-"Hide end screen cards"
-"Hide end screen suggested video"
-"Hide info cards"
-"Hide layout components"
-"Hide player flyout menu components"
-"Hide player overlay buttons"
-"Hide video action buttons"
-"Loop video"
-"Miniplayer"
-"Open channel of live avatar"
-"Open system share sheet"
-"Playback buffer"
-"Playlist button"
-"Playlist improvements"
-"Reload video"
-"Remove background playback restrictions"
-"Remove viewer discretion dialog"
-"Restore original titles"
-"Sanitize sharing links"
-"Save to Watch later"
-"Shorts autoplay"
-"Skip live Shorts"
-"SponsorBlock"
-"Spoof device dimensions"
-"Spoof video streams"
+Add to queue
+AI channel filter
+App refresh rate
+Autoplay control
+Bypass link redirects
+Change start page
+Comment search
+Copy text
+Copy video link
+Disable auto feed refresh
+Disable continue watching prompt
+Disable double tap actions
+Disable DRC audio
+Disable fullscreen gestures
+Disable haptic feedback
+Disable layout updates
+Disable player popup panels
+Disable QUIC protocol
+Disable rolling number animations
+Disable Shorts resuming on startup
+Disable sign in to TV popup
+Disable video codecs
+Enable debugging
+Force animations
+Force fullscreen landscape
+Force original audio
+Fullscreen video scale
+GmsCore support
+Hide ads
+Hide autoplay preview
+Hide end screen cards
+Hide end screen suggested video
+Hide info cards
+Hide layout components
+Hide player flyout menu components
+Hide player overlay buttons
+Hide Shorts components
+Hide video action buttons
+Loop video
+Miniplayer
+Navigation bar
+Open channel of live avatar
+Open links externally
+Open system share sheet
+Open videos fullscreen
+Override YouTube Music buttons
+Playback buffer
+Playlist button
+Playlist improvements
+Reload video
+Remove background playback restrictions
+Remove viewer discretion dialog
+Restore original titles
+Sanitize sharing links
+Save to Watch later
+Shorts autoplay
+Skip live Shorts
+SponsorBlock
+Spoof device dimensions
+Spoof video streams
+Video quality

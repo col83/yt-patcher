@@ -12,7 +12,7 @@ fi
 UPDATE_CHANNEL="dev" # main, dev
 UPDATE_JSON="$(curl -fsSL https://raw.githubusercontent.com/MorpheApp/morphe-patches/${UPDATE_CHANNEL}/patches-bundle.json)"
 
-PATCHER="morphe-desktop-2.3.0-dev.3-all.jar"
+PATCHER="morphe-desktop-2.4.0-dev.4-all.jar"
 if [ ! -f "${PATCHER}" ]; then
     echo; echo "ERROR: Patcher '${PATCHER}' not exist."; echo
     exit 2
@@ -21,7 +21,7 @@ fi
 PATCHES_VER="$(jq -r '.version' <<< "$UPDATE_JSON")"
 
 # test redefine
-PATCHES_VER="2.4.0-dev.6"
+PATCHES_VER="2.4.0-dev.12"
 
 PATCHES_FILE_URL="$(jq -r '.download_url' <<< "$UPDATE_JSON")"
 # PATCHES_FILE_URL="https://github.com/MorpheApp/morphe-patches/releases/download/v${PATCHES_VER}/patches-${PATCHES_VER}.mpp"
@@ -32,7 +32,7 @@ if [ ! -f "${PATCHES_FILE}" ]; then
     exit 2
 fi
 
-JDK_PATH="jdk-21.0.12.1+1"
+JDK_PATH="jdk-21.0.13.1+2"
 if [ ! -d "${JDK_PATH}" ]; then
     echo; echo "ERROR: ${JDK_PATH} not exist."; echo
     exit 2
@@ -72,19 +72,25 @@ if [ ! -f "morphe-data/morphe.keystore" ]; then
 fi
 
 
-clear
 echo
 "${JDK_PATH}/bin/java" -Xms1024M -Xmx1512M -Xss256k -XX:ReservedCodeCacheSize=512M \
   -jar "${PATCHER}" patch --patches "${PATCHES_FILE}" \
   -e "Add to queue" \
+  -e "AI channel filter" \
+  -e "App refresh rate" \
+  -e "Autoplay control" \
   -e "Bypass link redirects" \
   -e "Change start page" \
+  -e "Comment search" \
   -e "Copy text" \
   -e "Copy video link" \
+  -e "Disable auto feed refresh" \
   -e "Disable continue watching prompt" \
+  -e "Disable double tap actions" \
   -e "Disable DRC audio" \
   -e "Disable fullscreen gestures" \
   -e "Disable haptic feedback" \
+  -e "Disable layout updates" \
   -e "Disable player popup panels" \
   -e "Disable QUIC protocol" \
   -e "Disable rolling number animations" \
@@ -93,6 +99,7 @@ echo
   -e "Disable video codecs" \
   -e "Enable debugging" \
   -e "Force animations" \
+  -e "Force fullscreen landscape" \
   -e "Force original audio" \
   -e "Fullscreen video scale" \
   -e "GmsCore support" \
@@ -104,11 +111,15 @@ echo
   -e "Hide layout components" \
   -e "Hide player flyout menu components" \
   -e "Hide player overlay buttons" \
+  -e "Hide Shorts components" \
   -e "Hide video action buttons" \
   -e "Loop video" \
   -e "Miniplayer" \
   -e "Open channel of live avatar" \
+  -e "Open links externally" \
   -e "Open system share sheet" \
+  -e "Open videos fullscreen" \
+  -e "Override YouTube Music buttons" \
   -e "Playback buffer" \
   -e "Playlist button" \
   -e "Playlist improvements" \
@@ -123,6 +134,7 @@ echo
   -e "SponsorBlock" \
   -e "Spoof device dimensions" \
   -e "Spoof video streams" \
+  -e "Video quality" \
   --exclusive \
   --keystore "morphe-data/morphe.keystore" --keystore-password "dashi2" --keystore-entry-alias "morphe" --keystore-entry-password "dashi2" \
   --striplibs "arm64-v8a" \
@@ -133,17 +145,17 @@ echo
 
 # Testing
 
-# JDK_PATH="jdk-21.0.12.1+1"
-# PATCHER="morphe-desktop-2.3.0-dev.3-all.jar"
+# JDK_PATH="jdk-21.0.13.1+2"
+# PATCHER="morphe-desktop-2.4.0-dev.4-all.jar"
 
 # rm -rf "morphe-data"
 # mkdir "morphe-data"
 
-# cp "config.json" "morphe-data/"
-
 # cp -R "libs/" "morphe-data/"
 
+# cp "config.json" "morphe-data/"
+
 # mkdir "morphe-data/patches/MorpheApp-morphe-patches/"
-# cp "patches-2.4.0-dev.6.mpp" "morphe-data/patches/MorpheApp-morphe-patches/"
+# cp "patches-2.4.0-dev.12.mpp" "morphe-data/patches/MorpheApp-morphe-patches/"
 
 # "%JDK_PATH%\bin\java.exe" -Xmx2G -XX:+UseLargePagesIndividualAllocation -XX:ReservedCodeCacheSize=512M -jar "%PATCHER%"
